@@ -16,7 +16,21 @@ public class Titulo {
     // set: modifica ou atribui um valor
     // Para adicionar get e set no vscode: botão direito do mouse + source action + escolher a opção referente
     // sem o public, a classe não deixa a pessoa ver os atributos ou métodos
+    
+    public void fichaTecnica() { // Método
+        System.out.println("Nome: " + getNome());
+        System.out.println("Ano de lançamento: " + getAnoDeLancamento());
+        System.out.println("Diretor: " + getDiretor());
+    }
 
+    public void avalia(double nota) { // Cria uma nova variável dentro do parâmetro
+        somaDasAvaliacoes += nota;
+        totalDeAvaliacoes++;
+    }
+
+    public double media() {
+        return getSomaDasAvaliacoes() / getTotalDeAvaliacoes(); // Retorna a divisão das avaliações totais
+    }
     public double getSomaDasAvaliacoes() {
         return somaDasAvaliacoes;
     }
@@ -73,18 +87,5 @@ public class Titulo {
         this.diretor = diretor;
     }
 
-    public void fichaTecnica() { // Método
-        System.out.println("Nome: " + getNome());
-        System.out.println("Ano de lançamento: " + getAnoDeLancamento());
-        System.out.println("Diretor: " + getDiretor());
-    }
-
-    public void avalia(double nota) { // Cria uma nova variável dentro do parâmetro
-        somaDasAvaliacoes += nota;
-        totalDeAvaliacoes++;
-    }
-
-    public double media() {
-        return getSomaDasAvaliacoes() / getTotalDeAvaliacoes(); // Retorna a divisão das avaliações totais
-    }
+    
 }
